@@ -80,15 +80,15 @@ myEmitter.emit('greet', 'Sujal', 'Rabadiya');
 const fs = require('fs');
 
 const students = [
-    { name: 'John Doe', age: 20, grade: 'A' },
-    { name: 'Jane Smith', age: 22, grade: 'B' },
-    { name: 'Arjun Rathod', age: 21, grade: 'A+' },
+    { id: 1, name: 'John Doe', age: 20, grade: 'A' },
+    { id: 2, name: 'Jane Smith', age: 22, grade: 'B' },
+    { id: 3, name: 'Arjun Rathod', age: 21, grade: 'A+' },
 ];
 
-for(index in students){
-    const studentDetails = `Student ${index + 1}:\nName: ${students[index].name}\nAge: ${students[index].age}\nGrade: ${students[index].grade}\n\n`;
-    fs.appendFile('students.txt', studentDetails, (err)=>{
-        if(err) throw err;
-    });
+for(std of students){
+    let data = `id:${std.id}\nname:${std.name}\nage:${std.age}\ngrade:${std.grade}\n\n`
+    fs.appendFile('students.txt', data, (err)=>{
+        if (err) throw err;
+    })
 }
 ```
