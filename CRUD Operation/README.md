@@ -1,6 +1,6 @@
 # Demonstrate CRUD Operations with Node.js, Express, and MongoDB
 
-## Install express and mongoose using NPM
+## Install required packages ( express and mongoose ) using NPM in the `CRUD-Operation` 
 ```
 npm i express mongoose
 ```
@@ -13,7 +13,7 @@ node app.js
 
 This document provides a step-by-step guide to test the API endpoints defined in `routes/user-router.js` using Postman.
 
-## Base URL http://localhost:3000/api/users
+## Base URL `http://localhost:3000/api/users`
 
 ## Endpoints and Test Cases
 
@@ -85,7 +85,7 @@ This document provides a step-by-step guide to test the API endpoints defined in
 - **Description**: Update an existing user's details.
 - **URL Parameter**: id (MongoDB ObjectId)
 - **Example**: `/63d67b54198e3c1a3d6b8c92`
-- **Request Body:
+- **Request Body**:
   ```json
   {
     "name": "Jane Doe",
