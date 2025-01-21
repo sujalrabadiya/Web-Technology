@@ -60,7 +60,7 @@ Set the `Content-Type` header to `application/json`.
 - **Endpoint**: `/`
 - **Description**: Fetch all users from the database.
 - **Expected Response**:
-  `Response Code: 201 Ok`
+  `Response Code: 200 Ok`
   ```json
   [
     {
