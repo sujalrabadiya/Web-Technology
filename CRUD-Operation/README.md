@@ -1,10 +1,10 @@
 # Demonstrate CRUD Operations with Node.js, Express, and MongoDB
 ## Open Terminal/CMD in the `CRUD-Operation` Directory.
-## Install required packages ( express and mongoose ) using NPM
+### Install required packages ( express and mongoose ) using NPM
 ```
 npm i express mongoose
 ```
-## Run app.js using node
+### Run app.js using node
 ```
 node app.js
 ```
