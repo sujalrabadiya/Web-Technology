@@ -12,7 +12,7 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
   - Error: `MongoNetworkError: failed to connect to server`  
   - Cause: Incorrect MongoDB URI or server is not running.  
   - Solution: Ensure MongoDB is running and check the URI given in `mogoose.connect()`.
-    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is not connecting.
+    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
 
 ---
 
@@ -21,7 +21,7 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
   - Error: `MongoParseError: Invalid connection string`  
   - Cause: The MongoDB connection string is incorrect or missing required parameters.  
   - Solution: Verify and correct the connection string format.
-    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is not connecting.
+    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
 
 ---
 
@@ -77,7 +77,7 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
   - Error: `SyntaxError: Unexpected token in JSON`  
   - Cause: Malformed JSON in request body.  
   - Solution: Ensure the request body is correctly formatted.
-    (e.g. less or more `,`, inappropriate brackets `{}`, inappropriate indentation (`space`), missing `""`)
+    (e.g. less or more comma `,`, inappropriate brackets `{}`, inappropriate indentation `space`, missing or inappropriate quotes `""`)
 
 - **Duplicate Key Error**  
   - Error: `MongoError: E11000 duplicate key error collection`  
@@ -85,4 +85,4 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
   - Solution: Insert a document with a different `_id` or unique field.
 
 ---
-### **⚠‼The first step in Error solving is to `Read`👀 and `Understand` the error.⁉**
+### **⚠‼The first step in Error solving is to `Read`👀 and `Understand` the error⁉**
