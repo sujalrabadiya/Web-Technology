@@ -12,6 +12,17 @@ const addUser = async (req, res) => {
     }
 }
 
+// Create multiple users
+const addUsers = async (req, res) => {
+    const data = req.body;
+    try {
+        const savedUsers = await User.insertMany(data);
+        res.status(201).json(savedUsers);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+}
+
 // Get all users
 const getAllUsers = async (req, res) => {
     try {
@@ -59,4 +70,4 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = { addUser, getAllUsers, getUserById, updateUser, deleteUser }
+module.exports = { addUser, addUsers, getAllUsers, getUserById, updateUser, deleteUser }
