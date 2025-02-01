@@ -59,8 +59,10 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
 
 ### **5. Testing & Postman Errors**
 - **Request Timeouts**  
-  - Error: `ETIMEDOUT`  
-  - Cause: Server is not responding within the expected time.  
+  - Error: `ETIMEDOUT`\
+    `connect ECONNREFUSED 127.0.0.1:3000`
+  - Cause: Server is not responding within the expected time.  \
+    Server is not running.
   - Solution: Check if the server is running and listening on the correct port.
 
 - **Invalid Route or Endpoint Not Found**  
