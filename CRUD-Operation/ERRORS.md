@@ -4,15 +4,18 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
 
 ### **1. Setup and Installation Errors**
 - **Module Not Found**  
-  - Error: `Error: Cannot find module 'express'`  
-  - Cause: Dependencies are not installed.  
-  - Solution: Run `npm install` to install required dependencies.
+  - Error: `Error: Cannot find module 'express'`\
+    or `Error: Cannot find module '../user-router.js'`
+  - Cause: Dependencies are not installed.\
+    or Incorrect path in require statement.
+  - Solution: Run `npm install` to install required dependencies.\
+    or Correct path in require statement.
 
 - **MongoDB Connection Failure**  
   - Error: `MongoNetworkError: failed to connect to server`  
   - Cause: Incorrect MongoDB URI or server is not running.  
-  - Solution: Ensure MongoDB is running and check the URI given in `mogoose.connect()`.
-    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
+  - Solution: Ensure MongoDB is running and check the URI given in `mogoose.connect()`.\
+    or Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
 
 ---
 
@@ -20,8 +23,8 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
 - **Invalid MongoDB Connection String**  
   - Error: `MongoParseError: Invalid connection string`  
   - Cause: The MongoDB connection string is incorrect or missing required parameters.  
-  - Solution: Verify and correct the connection string format.
-    Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
+  - Solution: Verify and correct the connection string format.\
+    or Edit MongoDB Connection String to `127.0.0.1` if MongoDB is still not connecting.
 
 ---
 
@@ -30,7 +33,9 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
 - **Port Already in Use**  
   - Error: `EADDRINUSE: address already in use`  
   - Cause: The port (e.g., 3000) is already being used by another process or server.  
-  - Solution: Use a different port (`5000`) or close all terminals and rerun server or stop exsiting running server using `CTRL+C` and try to rerun server.
+  - Solution: Use a different port (`5000`)\
+    or Close all terminals and rerun server\
+    or stop exsiting running server using `CTRL+C` and try to rerun server.
 
 ---
 
@@ -76,7 +81,7 @@ When creating and testing a CRUD API using Node.js, Express, and MongoDB, you ma
 - **Invalid JSON Format in Request**  
   - Error: `SyntaxError: Unexpected token in JSON`  
   - Cause: Malformed JSON in request body.  
-  - Solution: Ensure the request body is correctly formatted.
+  - Solution: Ensure the request body is correctly formatted.\
     (e.g. less or more comma `,`, inappropriate brackets `{}`, inappropriate indentation `space`, missing or inappropriate quotes `""`)
 
 - **Duplicate Key Error**  
