@@ -72,7 +72,7 @@ import { Link } from "react-router-dom";
 
 export default function FacultiesList({ faculties, setFaculties }) {
     const deleteFaculty = (id) => {
-        setFaculties((prev) => prev.filter((fac) => fac.id !== id));
+        setFaculties(faculties.filter((fac) => fac.id !== id));
     };
     return (
         <div>
@@ -138,8 +138,7 @@ export default function FacultyForm({ faculties, setFaculties }) {
 
   const addUpdateFaculty = () => {
     if (newFaculty.id) {
-      setFaculties((prev) =>
-        prev.map((fac) => (fac.id === newFaculty.id ? newFaculty : fac))
+      setFaculties(faculties.map((fac) => (fac.id === newFaculty.id ? newFaculty : fac))
       );
     } else {
       setFaculties([
