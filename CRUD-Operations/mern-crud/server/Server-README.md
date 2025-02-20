@@ -6,7 +6,7 @@ npm i express mongoose
 ```
 ### Run app.js using node
 ```
-node app.js
+node server.js
 ```
 ---
 # Postman Testing Guide for CRUD API
