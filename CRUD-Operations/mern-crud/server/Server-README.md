@@ -4,7 +4,7 @@
 ```
 npm i express mongoose
 ```
-### Run app.js using node
+### Run server.js using node
 ```
 node server.js
 ```
