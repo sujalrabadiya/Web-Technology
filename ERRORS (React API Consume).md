@@ -100,6 +100,3 @@ fetch(`${API_URL}/${id}`, { method: "DELETE" })
     .catch(err => console.error(err));
 ```
 
-## Conclusion
-These are common errors faced when consuming an API in a React CRUD app. Proper debugging and error handling can help resolve these issues efficiently!
-
