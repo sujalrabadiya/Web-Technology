@@ -32,25 +32,7 @@ client/
 │── package.json
 ```
 
-## Step 5: Implement `App.jsx`
-Create `src/App.jsx` to handle routing.
-```jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UserList from "./UserList";
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {/* Route for listing users */}
-        <Route path="/" element={<UserList />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-```
-
-## Step 6: Implement `UserList.jsx`
+## Step 5: Implement `UserList.jsx`
 Create `src/UserList.jsx` to display the user list.
 ```jsx
 import { useState, useEffect } from "react";
@@ -106,6 +88,24 @@ export default function UserList() {
             </div>
         </div>
     );
+}
+```
+
+## Step 6: Implement `App.jsx`
+Create `src/App.jsx` to handle routing.
+```jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserList from "./UserList";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Route for listing users */}
+        <Route path="/" element={<UserList />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 ```
 
