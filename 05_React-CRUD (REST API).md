@@ -57,7 +57,7 @@ export default function UserList() {
 
     // Function to delete a user by ID
     const deleteUser = (id) => {
-        fetch(`${API_URL}/${id}`, { method: "DELETE" })
+        fetch(`${API_URL}/delete/${id}`, { method: "DELETE" })
             .then(() => fetchusers()) // Refresh user list after deletion
             .catch((err) => console.error(err));
     };
